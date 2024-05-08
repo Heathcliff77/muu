@@ -21,6 +21,8 @@
 (eval-and-compile
   (setq use-package-always-ensure t))
 
+;; Change frame title to muu
+(setq frame-title-format "muu Music Player")
 
 ;; Change all yes/no prompts to y/n
 (fset 'yes-or-no-p 'y-or-n-p)
