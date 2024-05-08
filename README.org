@@ -8,7 +8,7 @@
 muu is a music player built on GNU Emacs and [[https://www.gnu.org/software/emms/][EMMS (Emacs Multimedia System)]].
 This is my configuration of EMMS that I have put together. I'm putting it up in the hope that it will be helpful for other users, raise interest in EMMS ... and maybe one or two persons might use muu as-is!
 
-It is a keyboard-driven, filesystem-oriented* music player. It is heavily inspired by the music player [[https://moc.daper.net/][MOC]] (essentially, the goal of muu is to be a clone of MOC). muu is intended to be a standalone program (a separate emacs-process). The rationale for this is to achieve a tightly integrated music player program,  with quick single-key keyboard shortcuts among other things.
+It is a keyboard-driven, filesystem-oriented* music player. It is heavily inspired by the music player [[https://moc.daper.net/][MOC]] (essentially, the goal of muu is to be a clone of MOC). muu is intended to be a standalone program (a separate Emacs-process). The rationale for this is to achieve a tightly integrated music player program,  with quick single-key keyboard shortcuts among other things.
 
 muu is a fairly extensive modification of Emacs, many common keybindings have been changed/removed.
 
@@ -45,13 +45,15 @@ Some features of muu are:
 - dired-narrow
 (These packages installs automatically.)
   
-1. Make sure you have emacs and mpv installed.
+1. Make sure you have Emacs and mpv installed.
 2. Place the directory ~.muu~, containing ~init.el~, ~settings.el~ and ~keybindings.el~ in your home folder.
 3. Start muu by executing the file ~muu~, which simply is the command =emacs --init-directory=~/.muu/=, or run this command directly, or setup an alias for your shell.
 
-4. The very first time you start muu, emacs packages will be downloaded, installed and compiled.
+4. The very first time you start muu, Emacs packages will be downloaded, installed and compiled.
    Some compilation warnings could pop up, the easiest thing is to simply quit muu and start it again.
-   
+
+Note: It is assumed that =--init-directory=~/.muu/= is sufficient to separate muu from your usual Emacs.
+
 * Configuration
 
 See the files ~settings.el~ and ~keybindings.el~ for settings and keyboard shortcuts.
@@ -63,7 +65,7 @@ Playlist track description is done in ~init.el~ and could be one thing some want
 * Usage
 
 muu is simply a file browser view (on the left side) and playlist view (on the right side).
-Many common emacs keybindings have been changed/removed, but essential ones are the same: C-g, M-x, C-x C-c.
+Many common Emacs keybindings have been changed/removed, but essential ones are the same: C-g, M-x, C-x C-c.
 
 :CONTENTS:
 - [[#file browser][File browser]]
@@ -72,21 +74,22 @@ Many common emacs keybindings have been changed/removed, but essential ones are 
 
 *Global keybindings:*
 
-| Key    | Action                           |
-|--------+----------------------------------|
-| Escape | Quit command (equivalent to C-g) |
-| Tab    | Switch window                    |
-| Space  | Pause                            |
-| left   | Seek backward                    |
-| right  | Seek forward                     |
-| + .    | Raise volume                     |
-| - ,    | Lower volume                     |
-| s      | Stop                             |
-| n      | Next track                       |
-| b      | Previous track                   |
-| C      | Clear playlist                   |
-| S      | Toggle Random                    |
-| C-w    | Write out/save playlist          |
+| Key     | Action                           |
+|---------+----------------------------------|
+| Escape  | Quit command (equivalent to C-g) |
+| Tab     | Switch window                    |
+| Space   | Pause                            |
+| up/down | Line up/down                     |
+| left    | Seek backward                    |
+| right   | Seek forward                     |
+| + .     | Raise volume                     |
+| - ,     | Lower volume                     |
+| s       | Stop                             |
+| n       | Next track                       |
+| b       | Previous track                   |
+| C       | Clear playlist                   |
+| S       | Toggle Random                    |
+| C-w     | Write out/save playlist          |
 
 
 ** File browser
@@ -95,6 +98,7 @@ Many common emacs keybindings have been changed/removed, but essential ones are 
 
 | Key   | Action                         |
 |-------+--------------------------------|
+| Enter | Enter directory                |
 | a     | Add to playlist                |
 | f / \ | Search                         |
 | g     | Refresh, undo narrowing        |
