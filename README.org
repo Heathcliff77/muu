@@ -134,6 +134,15 @@ The order for "next/previous" playlist can potentially be a bit weird.
 
 * Changelog
 
+** v1.2
+
+Display playlist track number.
+Progress bar: Fix occasional error.
+
+** v1.1
+
+Minor improvement.
+
 ** v1.0
 
 Initial release.
