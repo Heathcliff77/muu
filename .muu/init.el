@@ -43,6 +43,8 @@
 ;;No startup message
 (setq inhibit-startup-message t)
 
+;Move to first/last line of buffer when hitting beginning/end.
+(setq scroll-error-top-bottom t)
 
 ;Dired tweaks
 (require 'dired )
