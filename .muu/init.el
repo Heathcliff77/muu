@@ -85,6 +85,7 @@
 	  (require 'emms-playing-time))
 	  
 	(setq emms-playlist-default-major-mode #'emms-playlist-mode)
+	(add-hook 'emms-playlist-mode-hook #'display-line-numbers-mode)
 	;; 'emms-info-native' supports mp3,flac and requires NO cli tools
 	;; (unless (memq 'emms-info-native emms-info-functions)
 	(require 'emms-info)
