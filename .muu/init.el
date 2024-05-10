@@ -110,7 +110,7 @@
   (let* ((total-playing-time (emms-track-get
                               (emms-playlist-current-selected-track)
                               'info-playing-time))
-         (elapsed-total (/ (* 100 emms-playing-time) total-playing-time)))
+         (elapsed-total (round(/ (* 100 emms-playing-time) total-playing-time))))
     (with-temp-message (format "[%-100s] %2d%%"
                                (make-string elapsed-total ?=)
                                elapsed-total)
