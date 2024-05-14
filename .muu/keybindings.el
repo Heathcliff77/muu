@@ -1,6 +1,6 @@
 ;muu keybindings
 
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
 
 (global-set-key (kbd "TAB") 'other-window)
 (define-key global-map (kbd "<left>") 'emms-seek-backward)
