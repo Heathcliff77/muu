@@ -57,7 +57,7 @@
 
 (define-key emms-playlist-mode-map "S" 'toggle-random)
 (define-key emms-playlist-mode-map "C" 'emms-playlist-clear)
-(define-key emms-playlist-mode-map (kbd "C-d") 'kill-this-buffer) ;kill playlist
+(define-key emms-playlist-mode-map (kbd "C-d") (lambda () (interactive) (progn (kill-this-buffer) (emms-playlist-set-playlist-buffer)))) ;kill playlist
 
 (define-key emms-playlist-mode-map (kbd "P") 'create-playlist)
 (define-key emms-playlist-mode-map (kbd "]") (lambda () (interactive) (progn (emms-playlist-mode-next 1) (emms-playlist-set-playlist-buffer))))
