@@ -84,7 +84,8 @@
 	  (require 'emms-volume)
 	  (require 'emms-mode-line)
 	  (require 'emms-cache)
-	  (require 'emms-playing-time))
+	  (require 'emms-playing-time)
+	  (require 'emms-cue))
 	  
 	(setq emms-playlist-default-major-mode #'emms-playlist-mode)
 	(add-hook 'emms-playlist-mode-hook #'display-line-numbers-mode)
@@ -92,7 +93,7 @@
 	;; (unless (memq 'emms-info-native emms-info-functions)
 	(require 'emms-info)
     (require 'emms-info-native)
-    (push 'emms-info-native emms-info-functions)
+	(setq emms-info-functions '(emms-info-native emms-info-cueinfo))
 	
 	(emms-cache 1)
 	(emms-mode-line 1)
