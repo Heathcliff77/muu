@@ -43,6 +43,7 @@ Some features of muu are:
 - use-package
 - EMMS
 - dired-narrow
+- loccur
 (These packages installs automatically.)
   
 1. Make sure you have Emacs and mpv installed.
@@ -78,6 +79,7 @@ Many common Emacs keybindings have been changed/removed, but essential ones are 
 |---------+----------------------------------|
 | Escape  | Quit command (equivalent to C-g) |
 | Tab     | Switch window                    |
+| f / \   | Search                           |
 | Space   | Pause                            |
 | up/down | Line up/down                     |
 | left    | Seek backward                    |
@@ -91,6 +93,7 @@ Many common Emacs keybindings have been changed/removed, but essential ones are 
 | S       | Toggle Random                    |
 | C-w     | Write out/save playlist          |
 
+~Search~ will narrow down the view to any content matching the search string. It behaves a bit differently in the file browser and playlist views, hit 'g' in file browser to undo the narrowing, in playlist hit either 'Enter' or the ~Search~-key again to undo.
 
 ** File browser
 
@@ -100,15 +103,12 @@ Many common Emacs keybindings have been changed/removed, but essential ones are 
 |-------+--------------------------------|
 | Enter | Enter directory                |
 | a     | Add to playlist                |
-| f / \ | Search                         |
 | g     | Refresh, undo narrowing        |
 | u     | Up directory                   |
 | J     | Go to (Jump) to directory      |
 | [1-0] | Go to bookmark directory #1-10 |
 
 ~Add~ will add the file, directory or playlist file (.pls .m3u) the cursor is currently placed on.
-~Search~ will narrow down the file browser to any content matching the search string.
-
 The keys 1,2..0 are shortcuts for quickly jumping to directories you often want to visit.
 
 ** Playlists
@@ -133,6 +133,12 @@ Be careful not to hit ~C-d~ when you only have one playlist!
 The order for "next/previous" playlist can potentially be a bit weird.
 
 * Changelog
+
+** v1.3
+
+Add search functionality for playlist view.
+Enable the basic cue-support in EMMS.
+Minor improvements.
 
 ** v1.2
 
