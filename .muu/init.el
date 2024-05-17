@@ -69,6 +69,10 @@
 ;dired-narrow provides a nice narrowing functionality for dired.
 (use-package dired-narrow :ensure t)
 
+(use-package loccur :ensure t
+  :config (setq loccur-highlight-matching-regexp nil))
+
+
 ;Adapted from https://blog.binchen.org/posts/how-to-use-emms-effectively/
 ;https://github.com/redguardtoo
 (use-package emms
@@ -232,6 +236,11 @@
           (with-current-buffer emms-source-old-buffer
 			(dired-get-marked-files))))
 
+;A small tweaking of loccur.
+(defun loccur-tweaked ()
+(interactive)
+  (let ((current-prefix-arg 4)) ;; emulate C-u
+	(call-interactively 'loccur)))
 
 ;left/right arrow keys will be used for seeking.
 (define-key global-map (kbd "<left>") nil)

@@ -44,6 +44,11 @@
 
 (define-key emms-playlist-mode-map (kbd "TAB") 'other-window)
 (define-key emms-playlist-mode-map (kbd "SPC") 'emms-pause)
+
+(define-key emms-playlist-mode-map "f" 'loccur-tweaked)
+(define-key emms-playlist-mode-map (kbd "/") 'loccur-tweaked)
+(define-key emms-playlist-mode-map (kbd "\\") 'loccur-tweaked)
+
 (define-key emms-playlist-mode-map "s" 'emms-stop)
 (define-key emms-playlist-mode-map "d" 'emms-playlist-mode-kill-track)
 (define-key emms-playlist-mode-map "n" 'next-track)
