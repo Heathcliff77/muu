@@ -134,6 +134,10 @@ The order for "next/previous" playlist can potentially be a bit weird.
 
 * Changelog
 
+** v1.4
+
+Minor improvement.
+
 ** v1.3
 
 Add search functionality for playlist view.
