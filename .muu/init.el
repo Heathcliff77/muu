@@ -24,6 +24,9 @@
 ;; Change frame title to muu
 (setq frame-title-format "muu Music Player")
 
+;; Remove unnecessary components from the modeline
+(customize-set-variable 'mode-line-format '("%e" mode-line-front-space mode-line-frame-identification mode-line-buffer-identification mode-line-modes mode-line-misc-info mode-line-end-spaces))
+
 ;; Change all yes/no prompts to y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
